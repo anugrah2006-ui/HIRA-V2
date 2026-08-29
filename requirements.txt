@@ -1,0 +1,34 @@
+# HIRA Assistant - Voice & Text AI Assistant
+# Core Dependencies
+
+# Speech Recognition & TTS
+SpeechRecognition>=3.10.0
+pyttsx3>=2.90
+PyAudio>=0.2.14; platform_system == "Windows"
+
+# AI & API Integration
+google-genai>=0.3.0
+requests>=2.31.0
+
+# System & Hardware Monitoring
+psutil>=5.9.0
+wmi>=1.5.1; platform_system == "Windows"
+
+# Web & Multimedia
+pywhatkit>=5.4
+wikipedia>=1.4.0
+screen-brightness-control>=0.0.1
+
+# Automation & UI
+pyautogui>=0.9.53
+pyperclip>=1.8.2
+pywebview>=5.0.0
+PySide6>=6.7.0
+markdown2>=2.4.0
+Pygments>=2.17.0
+
+# Configuration Management
+python-dotenv>=1.0.0
+
+# PyAudio provides microphone mode. If installation fails on a non-Windows
+# setup, HIRA can still run with `py main.py --text`.
