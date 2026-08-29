@@ -76,15 +76,12 @@ def log(message):
 
 def get_engine():
     global engine
-    if engine is not None:
-        return engine
-
     try:
-        engine = pyttsx3.init()
+        return pyttsx3.init()
     except Exception as exc:
         log(f"Text-to-speech unavailable: {exc}")
         engine = False
-    return engine
+        return False
 
 
 def speak(text, print_text=True):
@@ -97,6 +94,7 @@ def speak(text, print_text=True):
     try:
         tts_engine.say(text)
         tts_engine.runAndWait()
+        tts_engine.stop()
     except Exception as exc:
         log(f"Speech output failed: {exc}")
 
